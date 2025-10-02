@@ -1,7 +1,35 @@
-friends = ["Apple", "Orange", 5, 345.06, False, "Aakash", "Rohan"]
+friends = ["Alice", "Bob", "Charlie","David","Eva","Frank", "Grace"]
+#slice = friends[0:2]
+print (friends[0])
+print (friends[1])
+print (friends[2])
 
-print(friends[0])
-friends[0] = "Grapes" # Unlike Strings lists are mutable
+#addition
+friends.append("Dave")
+print (friends)
 
-print(friends[0])
-print(friends[1:4])
+#revesre
+friends.reverse()
+
+#insert
+friends.insert(2,"Zoe") 
+print (friends)
+
+#remove
+friends.remove("Bob")
+print (friends)
+
+#pop
+friends.pop()
+print (friends)
+
+#sort
+friends.sort()
+print (friends)
+
+#length
+print (len(friends))    
+
+#clear  
+friends.clear()
+print (friends)
