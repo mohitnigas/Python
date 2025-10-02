@@ -1,0 +1,37 @@
+# Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+# Tuple is written with round brackets.
+# Tuple is immutable, meaning that you cannot change, add or remove items once the tuple is created.
+
+a = (1, 2, 3, 4, 5, "hello", "world" ,"pickle","java","python","c++","ruby","html","css","sql","swift","kotlin","go","rust")
+b = (1, 2, 3, 4, 5, "ground", "earth" ,"car")
+print(a)
+print(b)
+
+#accessing elements
+print(a[0])
+print(a[8])
+print(b[0])
+print(b[5])
+
+#slicing
+print(a[0:5])
+
+#negative indexing
+print(a[-1])
+print(a[-4])
+
+#length
+print(len(a))
+
+#count
+print(a.count("hello")) 
+print(a.count(1))
+print(a.count("java"))
+print(b.count("ground"))
+print(b.count(1))
+print(b.count("car"))
+
+#index
+print(a.index("hello"))
+
+
