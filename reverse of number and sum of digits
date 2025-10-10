@@ -1,0 +1,16 @@
+# 5.program to reverse a number and also print sum of digits of the number
+
+num = int(input("Enter a number: "))
+reverse = 0
+sum_digits = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    sum_digits += digit
+    num //= 10
+
+print("Reversed Number:", reverse)
+print("Sum of Digits:", sum_digits)
+
+
