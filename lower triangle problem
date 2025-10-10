@@ -1,0 +1,16 @@
+# Problem 4: Print the pattern in a simple way
+
+n = 5  # because last row has 5 letters (A to E)
+
+for i in range(n, 0, -1):          # loop from 5 down to 1
+    for j in range(1, i + 1):      # loop from 1 to current row length
+        print(chr(64 + j), end=" ")  # convert number to letter (65 -> 'A')
+    print()  # move to next line
+
+
+output:
+A B C D E
+A B C D
+A B C
+A B
+A
