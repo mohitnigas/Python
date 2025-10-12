@@ -1,0 +1,14 @@
+def count_case(s):
+    upper = 0 # upper case characters count
+    lower = 0 # lower case characters count
+    for ch in s:
+        if ch.isupper():  # agar character upper case hai to
+            upper += 1  # upper case count me 1 add kar do
+        elif ch.islower():  # agar character lower case hai to
+            lower += 1   # lower case count me 1 add kar do 
+    print("No. of Upper case characters:", upper)
+    print("No. of Lower case characters:", lower)
+
+# main program
+text = input("Enter a string: ")
+count_case(text)
