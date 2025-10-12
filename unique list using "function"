@@ -1,0 +1,12 @@
+def unique_list(numbers):
+    unique = []          # isi empty list ham unique elements store karenge
+    for n in numbers:
+        if n not in unique:   # agar n unique list me nahi hai to hi usse add karenge
+            unique.append(n)
+    return unique
+
+# main program
+sample_list = [1, 2, 5, 3, 4, 3, 4, 5]
+result = unique_list(sample_list)
+print("Sample List:", sample_list)
+print("Unique List:", result)
