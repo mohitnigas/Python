@@ -1,0 +1,13 @@
+def check_prime(num):
+    if num <= 1:
+        print(num, "is not a prime number.")
+        return              # return krne se function yha hi ruk jayega
+    for i in range(2, num): # ye yha 2 se start krke num-1 tk check kr rha hai
+        if num % i == 0:
+            print(num, "is not a prime number.")
+            return          # return krne se function yha hi ruk jayega
+    print(num, "is a prime number.")
+
+# main program
+n = int(input("Enter a number: "))
+check_prime(n)
