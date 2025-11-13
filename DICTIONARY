@@ -1,0 +1,70 @@
+dict = {"name" : "rohit"
+        , "age" : 20
+        , "car" : "BMW"
+        , "bike" : "Duke"
+        , "language" : ["python", "java", "c++", "html", "css", "sql"]
+        , "address" : {"city" : "New Delhi", "state" : "Delhi", "country" : "India"}
+        , "isStudent" : True
+        , "marks" : (90, 95, 85, 80, 70)
+         }
+print(dict)
+print(dict["name"])
+print("Age is : ", dict["age"])
+print("Car is : ", dict["car"])
+
+
+
+#accessing elements
+print("First language is : ", dict["language"][0])
+print("Third language is : ", dict["language"][2])
+
+#accessing nested dictionary
+print("City is : ", dict["address"]["city"])
+
+#accessing tuple
+print("Last mark is : ", dict["marks"][-1])
+
+#updateing value
+dict.update({"age" : 21})
+print("Updated Age is : ", dict["age"])
+
+
+#items() method
+for key, value in dict.items():
+    print(key, " : ", value)
+
+#keys() method
+for key in dict.keys():
+    print("Key is : ", key)
+
+#values() method
+for value in dict.values(): 
+    print("Value is : ", value)
+
+
+#length of dictionary
+print("Length of dictionary is : ", len(dict))
+
+#adding new key-value pair
+dict["school"] = "ABC School"
+print("Added new key-value pair : ", dict)
+
+#popping an item
+popped_value = dict.pop("bike")
+print("Popped value is : ", popped_value)
+print("Dictionary after popping an item : ", dict)
+
+
+
+#removing last inserted item
+removed_item = dict.popitem()
+print("Removed item is : ", removed_item)
+print("Dictionary after removing last inserted item : ", dict)
+
+#checking if key exists
+if "car" in dict:
+    print("Key 'car' exists in the dictionary.")
+
+#clearing the dictionary
+dict.clear()
+print("Dictionary after clearing : ", dict)
