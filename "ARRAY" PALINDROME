@@ -1,0 +1,11 @@
+text = input("Enter a string: ")    # yha se user se string input le rahe hai 123 ya abcd bhi
+
+                                    # Create array with only lowercase letters/numbers
+chars = [c.lower() for c in text if c.isalnum()] 
+
+                                    # Check palindrome by comparing characters from start and end
+if chars == list(reversed(chars)):
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
