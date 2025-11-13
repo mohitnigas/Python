@@ -1,0 +1,23 @@
+
+text = input("Enter a string: ") # yha se user se string input le rahe hai
+
+
+char_list = []      # Create an empty list to store characters and their counts
+count_list = []
+
+# yha har character ke liye loop chala rahe hai
+for char in text:
+    if char in char_list:
+        
+        index = char_list.index(char)   # If character is already in list, increase its count
+        count_list[index] += 1
+    else:
+       
+        char_list.append(char)          # If character is not in list, add it and set count to 1
+        count_list.append(1)
+
+# Print the character frequencies , main code yha se start ho raha hai
+
+print("Character frequencies:")
+for i in range(len(char_list)):
+    print(f"{char_list[i]}: {count_list[i]}")
