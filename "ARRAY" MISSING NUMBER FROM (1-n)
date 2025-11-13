@@ -1,0 +1,32 @@
+#Here we find the missing number from the list.
+
+array = list(map(int, input("Enter numbers separated by spaces: ").split()))    #first it read that input must be integer then, it split them by comma then, form list of those numbers
+n = len(array) + 1
+total_sum = n * (n + 1) // 2
+array_sum = sum(array)
+missing = total_sum - array_sum
+print("Missing number is:", missing)
+
+
+eg. 1 2 4 5
+1.  array = [1, 2, 4, 5]
+
+2.  n = len(arr) + 1
+    = 4 + 1
+    = 5
+
+3.  total_sum = 5 * (5 + 1) // 2 = 5 * 6 // 2 = 15 
+
+4.  arr_sum = sum(array) = 1 + 2 + 4 + 5 = 12
+
+5.  missing = total_sum - arr_sum
+         = 15 - 12
+         = 3
+
+6.  Missing number is: 3
+
+	​
+
+
+
+
