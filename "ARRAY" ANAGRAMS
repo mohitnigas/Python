@@ -1,0 +1,26 @@
+
+                                                                   # Take input from the user
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+
+                                                                   # yha dono strings ke characters ko arrays me store kar rahe hai
+arr1 = []
+arr2 = []
+
+for c in str1:
+    if c.isalnum():                                                # yha check kar rahe hai ki character alphanumeric hai ya nahi
+        arr1.append(c.lower())                                     # append = (add karna) , append kar rahe hai character ko lower case me
+
+for c in str2:
+    if c.isalnum():                                                # yha check kar rahe hai ki character alphanumeric hai ya nahi
+        arr2.append(c.lower())                                     # append kar rahe hai character ko lower case me
+
+                                                                   # Sort the arrays
+arr1.sort()
+arr2.sort()
+
+                                                                   # Compare the arrays
+if arr1 == arr2:
+    print("The strings are anagrams.")
+else:
+    print("The strings are not anagrams.")
