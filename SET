@@ -1,0 +1,33 @@
+s = {"apple", "banana", "grape",1,2,3,(4,5), (6,7)}
+p = {"banana", "kiwi", 3,4,5,(6,7), (8,9)}
+print(s)
+
+#adding an element
+s.add("orange")
+print(s)
+
+#removing an element
+s.remove("banana")  
+print(s)
+
+#discarding an element
+s.discard("grape")  
+print(s)
+
+#union of two sets
+union_set = s.union(p)
+print("Union of sets s and p:", union_set)
+
+#intersection of two sets
+intersection_set = s.intersection(p)
+print("Intersection of sets s and p:", intersection_set)
+
+#difference of two sets
+difference_set = s.difference(p)
+print("Difference of sets s and p (s - p):", difference_set)
+
+
+#clearing the set
+s.clear()
+print("Set after clearing:", s)
+
