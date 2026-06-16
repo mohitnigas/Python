@@ -20,3 +20,15 @@ elif (a == 18):
 
 else:
     print("You are eligible to vote.")
+
+
+#nested if statement
+l = ["temu", "amazon", "flipkart", "myntra"]
+
+name = input("Enter the name of the e-commerce platform: ")
+name = name.lower()  # convert input to lowercase for case-insensitive comparison
+
+if name in l:
+    print("Platform found.")
+else:
+    print("Platform not found.")
