@@ -1,0 +1,17 @@
+#while loop
+i =1 
+while (i<=10):
+    print (i)
+    i+=1
+    
+#for loop
+for i in range (1,12):
+    if i == 8:
+        break #break will stop the loop when i is 8
+    print (i)
+
+
+for i in range (1,12):
+    if i == :
+        continue #continue will skip the rest of the loop when i is 8
+    print (i)
