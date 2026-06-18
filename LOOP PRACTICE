@@ -1,0 +1,36 @@
+#table
+num= int(input("enter a number to print its table: "))
+for i in range(1, 11):
+    print (f"{num} x {i} = {num*i}")
+
+
+#startswith
+name = input("enter your name: ")
+name = name.upper() #converting the name to uppercase to make it case insensitive
+if name.startswith("Y"):
+    print ("YOU ARE AWESOME")
+
+else:
+    print ("YOU ARE NOT AWESOME")
+
+
+#table using while loop
+num = int(input("enter a number to print its table: "))
+i = 1
+while i <= 10:
+    print (f"{num} x {i} = {num*i}")
+    i+=1
+
+#factorial using for loop
+n = int(input("enter a number to find its factorial: "))
+product = 1
+for i in range(1,n+1):
+    product *= i
+print (f"factorial of {n} is {product}")
+
+#star pattern
+n = int(input("enter the number of rows for the star pattern: "))
+for i in range(1, n+1):
+    print (" " * (n-i),end="")
+    print ("*" * (2*i-1),end="")
+    print ("")
