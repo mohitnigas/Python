@@ -1,0 +1,52 @@
+def goodday (name,ending):
+    print (f"Good day {name} {ending}")
+    
+goodday("John","Smith")
+goodday("Jane","Doe")
+
+
+#factorial using recursion
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)  
+n= int(input("Enter a number to find its factorial: "))
+print(f"The factorial of {n} is {factorial(n)}")
+
+
+#farehnite to celsius
+def f_to_c(fahrenheit):
+    celsius = (fahrenheit - 32) * 5/9
+    return celsius
+
+fahrenheit = float(input("Enter temperature in Fahrenheit: "))
+print(f"Temperature in Celsius: {f_to_c(fahrenheit)}")
+
+
+#sum of natural numbers using recursion
+def sum(n):
+    if n <=0:
+        return 0
+    else :
+        return n + sum(n-1)
+    
+n = int(input("Enter a positive integer to find the sum of natural numbers: "))
+print(f"The sum of first {n} natural numbers is: {sum(n)}")
+
+#pattern using recursion
+def pattern(n):
+    if n <= 0:
+        return # base case: do nothing for n <= 0
+    else :
+        print("*" * n)  # print n stars after the recursive call
+        pattern(n-1)  # recursive call with n-1
+n = int(input("Enter the number of rows for the pattern: "))
+pattern(n)
+
+#table using recursion
+def table(n):
+    for i in range(1, 11):
+        print(f"{n} x {i} = {n*i}")
+n = int(input("Enter a number to print its table: "))
+table(n)
