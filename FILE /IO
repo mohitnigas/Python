@@ -1,0 +1,43 @@
+#File handling in Python
+f = open("file.txt", "r")
+data = f.read()
+print (data)
+f.close()
+
+#writing to a file
+a = open("my.txt", "w")
+a.write("Hello World")
+a.close()
+
+#or
+srt = "Hello"
+b = open("my.txt", "w")
+b.write(srt)
+b.close()
+
+newline = "\nThis is a new line"
+e = open("my.txt", "a")
+e.write(newline)
+e.close()
+
+
+c = open("file.txt")
+line = c.readlines()
+print (line[2], type(line))
+c.close()
+
+d = open("file.txt")
+line = d.readline()
+while line != "":
+    print (line)
+    line = d.readline()
+d.close()
+
+newline = "\nThis is a new line"
+e = open("my.txt", "a")
+e.write(newline)
+e.close()
+
+#better way to handle file operations is using with statement as it automatically takes care of closing the file after the block of code is executed
+with open("file.txt") as f:
+    print (f.read())
