@@ -1,0 +1,54 @@
+import random
+f = open("poem.txt", "r")
+c = f.read()
+print(c)
+if ("Twinkle" in c):
+    print("Twinkle is present in the poem")
+else:
+    print("Twinkle is not present in the poem")
+    
+f.close()   
+
+
+
+#Game high score 
+def game():
+    print("Welcome to the game")
+    score = random.randint(1, 100)
+    #save the high score in a file
+    with open("highscore.txt", "r") as f: 
+        highscore = f.read()    
+        if highscore != "": 
+         highscore = int(highscore)
+        else:
+         highscore = 0 
+
+    print(f"Your score is: {score}")
+    if score > highscore:
+        print("You have the new high score!") 
+        with open("highscore.txt", "w") as f: 
+         f.write(str(score))
+    return score
+game()
+
+
+
+#replace a word in a file with another word
+word = "donkey"
+
+with open("donkey_btw.txt","r") as f:
+    content = f.read()
+contentnew = content.replace(word, "#####")
+
+with open ("donkey_btw.txt","w") as f:
+    f.write(contentnew)
+
+
+
+#copy the content of a file to another file
+with open("this.txt","r") as f:
+   content = f.read()   
+
+with open("this_new.txt","w") as f:
+   f.write(content)
+
