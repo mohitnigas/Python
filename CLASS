@@ -1,0 +1,48 @@
+class employee:
+    name = "harry"
+    salary = 150000
+    language = "python"
+    content = "sugar"
+    ram = "faf"
+
+@staticmethod       
+def greet(): 
+    print ("yoo hii there!")
+
+pappu = employee()
+greet()
+print(pappu.salary)
+print(pappu.language)
+print (pappu.name)
+
+
+#it runs attribute but also run class attribute if asked to run
+class Demo :
+    a = 4
+o = Demo
+print(o.a)
+
+o.a = 0
+print (o.a)
+print(Demo.a)
+
+
+#train class to get all the info realted to train
+import random
+class train :
+    def __init__(self,trainNO):
+        self.trainNO = trainNO
+        
+    def book (self,fro,to):
+        print(f"Ticket is booked in train no {self.trainNO} from {fro} to {to}")
+    
+    def getstatus(self):
+         print(f"train no. {self.trainNO} running on time from departure")
+        
+    def getfare (self,fro,to):
+        print(f"the fare of {self.trainNO} from {fro} to {to} is {random.randint(0,100)}")
+
+t = train(3102006)
+t.book("bihar","champara")
+t.getstatus()
+t.getfare("bihar","champara")
