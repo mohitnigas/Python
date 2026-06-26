@@ -1,0 +1,27 @@
+class employee:
+    salary = 1200000
+    name = "mohit"
+    language = "pyhton"
+    def info(self,name,language):   
+     self.name = name
+     self.language = language
+     print(f'''employee name is {self.name} and currenty he is developing core interest in {self.language} with salary ''')
+
+
+class programmer :
+    job = "ITC"
+    name = "mohit"
+    language = "c++"
+    def emp(self,name, language) :
+     self.name = name 
+     self.language = language
+     print(f'''employee name is {self.name} and currenty he is developing core interest in {self.  language} with salary ''')
+    
+    
+a = employee()
+b = programmer()
+
+print(a.salary,b.job,a.name,a.language)
+
+a.info("yu" , "python")
+b.emp("sam" , "java")
