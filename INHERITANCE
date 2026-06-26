@@ -1,0 +1,98 @@
+class employee ():
+        company = "GMITC"
+        def emp (self,name,language):
+          self.name = name
+          self.language = language
+          print (f"name of the employee is {self.name}, and his core interest is in {self.language} language")
+
+class programmer (employee):
+        company = "ITC"
+        def info (self,name,language):
+          self.name = name
+          self.language = language
+          print (f"employee is {self.name}, and interest is in {self.language} language")
+        
+a = employee()
+b = programmer()
+print(a.company)
+print(b.company)
+a.emp("sam","python")
+b.info("yu","c++")
+
+
+#super() method is used to access parent class and  __init__() initialises the object
+class school :
+      def __init__(self):
+          print ("constructor of school")
+      a = 1
+
+class class_section(school) :
+      def __init__(self):
+          super().__init__()
+          print ("constructor of class_section")
+      b = 2
+
+class student (class_section):
+      def __init__(self):
+          super().__init__()
+          print ("constructor of student")
+      c = 3
+
+y = student()
+print(y.a,y.b,y.c)
+
+
+#class method --> it is used to run class attribute instead of instance attribute
+class employee:
+    a = 3
+    
+    @classmethod
+    def show(cls):
+      print(f"the class attribute is {cls.a} ") 
+    
+b = employee()
+b.a = 30
+
+b.show()
+
+
+# @property decorator and @.setter
+class employee:
+    a = 3
+    
+    @classmethod
+    def show(cls):
+      print(f"the class attribute is {cls.a} ") 
+
+    @property
+    def name (self):
+        return f"{self.fname} {self.lname} "
+    
+    @name.setter
+    def name (self,value):
+        self.fname = value.split(" ")[0]
+        self.lname = value.split(" ")[1]
+
+
+emp = employee()
+emp.a = 30
+emp.name = "mohit sharma"
+print(emp.fname, emp.lname)
+emp.show()
+
+
+#operator overloading
+class Number :
+    def __init__(self,n):
+        self.n = n
+
+    def __add__(self, num):
+        return self.n + num.n
+#m1
+a = Number(2)
+b = Number(5)
+print (a+b)
+#m2
+c = Number(5)
+print(c.__add__(Number(6)))
+        
