@@ -1,0 +1,107 @@
+#1. VECTOR REPRESENTATION
+class twoDvector:
+    def __init__(self,i,j):
+        self.i = i
+        self.j = j
+
+    def show (self):
+        print(f"the vector is {self.i}i + {self.j}j" )
+
+
+class threeDvector(twoDvector):
+    def __init__(self,i,j,k):
+        super().__init__(i,j)
+        self.k = k
+
+    def show (self):
+        print(f"the vector is {self.i}i + {self.j}j + {self.k}k")
+              
+a = twoDvector(1,3)
+b = threeDvector(2,3,4)
+a.show()
+b.show()
+
+
+
+#2 HOW DOG SPEAKS, WHICH IS UNDER PET CLASS AND PET CLASS IS UNDER ANIMAL CLASS WITH INHERITANCE
+class animal:
+    def anml(self):
+        print("This class represents animal")
+
+class pets(animal):
+    def __init__(self):
+        super().anml()
+        print ("this class represents pets")
+
+class dog(pets):
+    name = "SAM"
+    language = "BARK"
+    def sound(self,name,language):
+       super().__init__()
+       self.name = name
+       self.language = language
+       print(f"name of dog is {self.name} and it {self.language}")
+a = dog ()
+print (a.name)
+print(a.language)
+a.sound("sam","bark") 
+
+#or
+
+class Animals:
+    pass
+class Pets(Animals):
+    pass
+class Dogs(Pets):
+    @staticmethod
+    def bark() :
+      print("The dog bow bow")
+
+d = Dogs()
+d.bark()
+
+
+
+#3 IT GIVES INCRIMENT IN SALARY OF EMPLOYEE
+class employee :
+    salary = 50000
+    incriment = 20
+
+    @property
+    def salaryAfterincirment (self):
+        return print(f"salay after incriment will be {self.salary + self.salary*(self.incriment/100)}")
+    
+    @salaryAfterincirment.setter
+    def salaryAfterincirment(self,salary):
+        self.incriment = ((salary/self.salary)-1)*100
+
+e = employee()
+print(e.salaryAfterincirment)
+e.salaryAfterincirment = 60000
+print(e.incriment)
+
+
+
+#4 MULTIPLICATION AND ADDITION OF COMPLEX NUMBER
+class Complex:
+    def __init__(self, r, i):
+        self.r = r
+        self.i = i
+
+    def __add__(self, c2):
+        return Complex(self.r + c2.r, self.i + c2.i)
+
+    def __mul__(self, c2):
+        real = self.r * c2.r - self.i * c2.i
+        imag = self.r * c2.i + self.i * c2.r
+        return Complex(real, imag)
+
+    def __str__(self):
+        return f"{self.r} + {self.i}i"
+
+
+C1 = Complex(2, 4)
+C2 = Complex(6, 7)
+
+print("Addition:", C1 + C2)
+print("Multiplication:", C1 * C2)
